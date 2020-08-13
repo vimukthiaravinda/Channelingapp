@@ -1,3 +1,90 @@
 <resources>
+    //Dashboard
     <string name="app_name">Channeling app</string>
+    <string name="login">Log-in</string>
+    <string name="DoctorName">Doctor Name:</string>
+    <string name="Spec">Specialization</string>
+    <string name="hospital">Hospital</string>
+    <string name="date">Date</string>
+    <string name="SearchButton">Search</string>
+    <string name="BottomText">Welcome To Channeling DOC App</string>
+    //Doctor result page
+    <string name="Title">Your Doctors</string>
+    <string name="Book">BookNow</string>
+    <string name="Search_menu">Search_menu</string>
+    //DoctorBook
+    <string name="Time">Time</string>
+    <string name="Date">Date</string>
+    <string name="ButtonBook">Book</string>
+    <string name="title">Doctor Name</string>
+    <string name="sepcial">Specialization</string>
+    <string name="feetype">Channeling Fee Rs</string>
+    <string name="BackSearch">Back to Search</string>
+    //Register
+    <string name="RegTitle">Register</string>
+    <string name="FirstName">First Name</string>
+    <string name="SecondName">Second Name</string>
+    <string name="email">Email</string>
+    <string name="Phonenumber">Phone Number</string>
+    <string name="Birthday">Birthday</string>
+    <string name="Password">Password</string>
+    <string name="Repassword">Re-password</string>
+    <string name="address">Address</string>
+    <string name="Gender">Gender</string>
+    <string name="backButton">Back</string>
+    //Login
+    <string name="UserName">User Name</string>
+    <string name="Login_password">Password</string>
+    <string name="logbutton">Log-in</string>
+    <string name="register">Register</string>
+    <string name="Forgot_password">Forgot password</string>
+    <string name="backbuttonlogin">Back</string>
+    //Profile
+    <string name="Profile_frist_name">First Name</string>
+    <string name="Profile_last_name">last Name</string>
+    <string name="Proemail">email</string>
+    <string name="ProAddress">Address</string>
+    <string name="Phone">Phone Number</string>
+    <string name="find_a_doctor">Find a Doctor</string>
+    <string name="BookedDoctor">Booked Doctor</string>
+    <string name="password">*****</string>
+    <string name="LogOut">Log-out</string>
+    <string name="Edit">Edit</string>
+    <string name="profile">Profile</string>
+    //Make Payment
+    <string name="credit_card">Credit card</string>
+    <string name="debit">Debit card</string>
+    <string name="titlePayment">Make Payment to Book A Doctor</string>
+    <string name="cardNumber">Card Number</string>
+    <string name="paymethod">Payment Method</string>
+    <string name="feetypepay">Channeling Fee Rs</string>
+    <string name="term">Terms and Condition</string>
+    <string name="refaracne">Read this note</string>
+    <string name="agree">agree</string>
+    <string name="disagree">disagree</string>
+    <string name="cancel">Cancel</string>
+    <string name="pay">Pay</string>
+    //admin
+    <string name="AdminTitle">Admin</string>
+    <string name="Doctor_id">Doctor ID</string>
+    <string name="Doctor_name">Doctor Name</string>
+    <string name="Admin_sepcial">Specialization</string>
+    <string name="Hospital">Hospital</string>
+    <string name="FirstDay">First Day</string>
+    <string name="SecondDay">Second Day</string>
+    <string name="ThirdDay">Third Day</string>
+    <string name="fourthday">Fourth day</string>
+    <string name="AddButton">Add Doctor</string>
+    <string name="deleteButton">Delete Doctor</string>
+    <string name="updateButton">Update Doctor</string>
+    <string name="viewButton">View Doctor</string>
+    //forgotten password
+    <string name="FogottTitle">Forgotten Password ?</string>
+    <string name="infoFor">Enter your email and check password in your email..</string>
+    <string name="fogottButton">Submit</string>
+    <string name="hintmail">Email</string>
+    //Thank you page
+    <string name="Payment_success">Payment Success.</string>
+    <string name="ThankTitle">Thank You!</string>
+    <string name="finish">Finish</string>
 </resources>
