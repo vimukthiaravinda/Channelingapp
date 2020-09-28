@@ -60,7 +60,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName6"
+                android:id="@+id/firstname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -80,7 +80,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName8"
+                android:id="@+id/secondName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -100,7 +100,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName9"
+                android:id="@+id/email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -120,7 +120,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName10"
+                android:id="@+id/brithday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -140,7 +140,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName11"
+                android:id="@+id/address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -160,7 +160,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName12"
+                android:id="@+id/phonenumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -180,7 +180,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editTextTextPassword4"
+                android:id="@+id/password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"

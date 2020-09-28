@@ -78,7 +78,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
 
     <Button
-        android:id="@+id/button14"
+        android:id="@+id/regButton"
         android:layout_width="103dp"
         android:layout_height="53dp"
         android:layout_marginStart="158dp"
@@ -87,6 +87,7 @@
         android:layout_marginEnd="165dp"
         android:layout_marginRight="165dp"
         android:layout_marginBottom="193dp"
+        android:onClick="OnClickRegister"
         android:text="@string/register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,16 +105,17 @@
         android:layout_marginRight="168dp"
         android:layout_marginBottom="18dp"
         android:text="@string/Forgot_password"
-        app:layout_constraintBottom_toTopOf="@+id/button16"
+        app:layout_constraintBottom_toTopOf="@+id/backInLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button14" />
+        app:layout_constraintTop_toBottomOf="@+id/regButton" />
 
     <Button
-        android:id="@+id/button16"
+        android:id="@+id/backInLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="68dp"
+        android:onClick="OnClickBack"
         android:text="@string/backButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
