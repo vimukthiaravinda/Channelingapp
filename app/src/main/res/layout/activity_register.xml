@@ -9,8 +9,8 @@
 
     <TableLayout
         android:id="@+id/RegForm"
-        android:layout_width="397dp"
-        android:layout_height="465dp"
+        android:layout_width="360dp"
+        android:layout_height="433dp"
         android:layout_marginStart="3dp"
         android:layout_marginLeft="3dp"
         android:layout_marginTop="27dp"
@@ -36,6 +36,7 @@
                 android:id="@+id/firstName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
                 android:ems="10"
                 android:inputType="textPersonName" />
         </TableRow>
@@ -56,6 +57,7 @@
                 android:id="@+id/secondName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
                 android:ems="10"
                 android:inputType="textPersonName" />
         </TableRow>
@@ -74,10 +76,12 @@
 
             <EditText
                 android:id="@+id/Email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="50dp"
                 android:ems="10"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:textSize="8sp" />
         </TableRow>
 
         <TableRow
@@ -93,11 +97,12 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/Phone_Number"
+                android:id="@+id/phonenumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="phone" />
+                android:inputType="textPersonName" />
+
         </TableRow>
 
         <TableRow
@@ -117,6 +122,7 @@
                 android:id="@+id/Birthday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
                 android:ems="10"
                 android:inputType="date" />
         </TableRow>
@@ -149,9 +155,10 @@
             <TextView
                 android:id="@+id/textView27"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="38dp"
                 android:layout_marginLeft="38dp"
+                android:layout_marginRight="38dp"
                 android:text="@string/Repassword"
                 android:textSize="18sp" />
 
@@ -166,7 +173,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="65dp">
 
             <TextView
                 android:id="@+id/textView28"
@@ -178,56 +185,27 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/home_address"
+                android:id="@+id/address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPostalAddress" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="69dp">
-
-            <TextView
-                android:id="@+id/textView29"
-                android:layout_width="97dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="38dp"
-                android:text="@string/Gender"
-                android:textSize="18sp" />
-
-            <RadioGroup
-                android:id="@+id/radio_OF_Gender"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <RadioButton
-                    android:id="@+id/male"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/male" />
-
-                <RadioButton
-                    android:id="@+id/female"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/female" />
-            </RadioGroup>
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
 
         </TableRow>
+
     </TableLayout>
 
     <Button
         android:id="@+id/registerInReg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_width="104dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="48dp"
         android:onClick="onClickInRegister"
         android:text="@string/register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -236,25 +214,26 @@
         android:layout_height="42dp"
         android:layout_marginStart="156dp"
         android:layout_marginLeft="156dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="171dp"
         android:layout_marginRight="171dp"
         android:text="@string/register"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/backInReg"
-        android:layout_width="78dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="118dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="48dp"
         android:onClick="onClickBackInReg"
         android:text="@string/backButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
