@@ -6,7 +6,7 @@ public class RegisterDb {
     public RegisterDb() {}
     public static class UserDetails implements BaseColumns {
         //DATABASE DETAILS
-        public static final String TableName = "Users";
+        public static final String TableName = "user";
         public static final String FirstName = "firstname";
         public static final String SecondName = "secondname";
         public static final String email = "email";

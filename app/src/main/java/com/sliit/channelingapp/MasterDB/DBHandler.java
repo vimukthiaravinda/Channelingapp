@@ -5,47 +5,37 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.List;
+
 
 public class DBHandler extends SQLiteOpenHelper {
     public static final String Database_Name = "channeling.db";
-    private static final String crateTable = "Create table "+ RegisterDb.UserDetails.TableName +" (" +
-            RegisterDb.UserDetails._ID+"INTEGER PRIMARY KEY AUTOINCREMENT," +
-            RegisterDb.UserDetails.FirstName+ "TEXT," +
-            RegisterDb.UserDetails.SecondName+ "TEXT," +
-            RegisterDb.UserDetails.email+ "TEXT," +
-            RegisterDb.UserDetails.phoneNumber+ "TEXT," +
-            RegisterDb.UserDetails.birthday+"TEXT," +
-            RegisterDb.UserDetails.address+"TEXT" +
-            RegisterDb.UserDetails.Password+"TEXT);";
     public DBHandler(Context context) {
-        super(context, Database_Name, null, 2);
+        super(context, Database_Name, null, 1);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(crateTable);
+        db.execSQL("Create table user(firstname text,secondname text,email text,phonenumber text,birthday text,password text,address text)");
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        /*String drop_table = "DROP TABLE IF EXISTS "+ RegisterDb.UserDetails.TableName;
-        db.execSQL(drop_table);
-        onCreate(db);*/
+        db.execSQL("drop table if exists user");
     }
     public boolean addInfoUser(UserData userData){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(RegisterDb.UserDetails.FirstName,userData.getFirst_name());
-        values.put(RegisterDb.UserDetails.SecondName,userData.getSecond_name());
-        values.put(RegisterDb.UserDetails.email,userData.getEmail());
-        values.put(RegisterDb.UserDetails.phoneNumber,userData.getPhone_number());
-        values.put(RegisterDb.UserDetails.birthday,userData.getBirthday());
-        values.put(RegisterDb.UserDetails.Password,userData.getPassword());
-        values.put(RegisterDb.UserDetails.address,userData.getAddress());
-        long res = db.insert(RegisterDb.UserDetails.TableName,null,values);
+        values.put("firstname",userData.getFirst_name());
+        values.put("secondname",userData.getSecond_name());
+        values.put("email",userData.getEmail());
+        values.put("phonenumber",userData.getPhone_number());
+        values.put("birthday",userData.getBirthday());
+        values.put("password",userData.getPassword());
+        values.put("address",userData.getAddress());
+        long res = db.insert("user",null,values);
         db.close();
-        if (res == -1) {
-            return false;
-        } else {
+            if (res == -1) {
+                return false;
+            }
             return true;
         }
     }
-}

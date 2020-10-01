@@ -1,7 +1,7 @@
 package com.sliit.channelingapp.MasterDB;
 
 public class UserData {
-   private String first_name,second_name,email,password,address,gender,phone_number,birthday;
+   private String first_name ,second_name ,email ,password ,address ,gender ,phone_number ,birthday;
 
     public UserData() {
     }

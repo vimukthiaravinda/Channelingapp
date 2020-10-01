@@ -19,7 +19,7 @@ public class Register extends AppCompatActivity {
     private Intent intent;
     private EditText First_name,Second_name,Email,Password,Birthday,phone_number;
     private EditText Address;
-
+    private  DBHandler db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +34,7 @@ public class Register extends AppCompatActivity {
         Address = findViewById(R.id.address);
         phone_number = findViewById(R.id.phonenumber);
         context = this;
+        db = new DBHandler(context);
     }
 
     public void onClickBackInReg(View view) {
@@ -50,14 +51,22 @@ public class Register extends AppCompatActivity {
         String address = Address.getText().toString();
         String birthday = Birthday.getText().toString();
         String phonenumber = phone_number.getText().toString();
-        DBHandler db = new DBHandler(context);
-        UserData userData = new UserData(Fname,Sname,email,password,address,null,phonenumber,birthday);
+        UserData userData  = new UserData();
+        userData.setFirst_name(Fname);
+        userData.setSecond_name(Sname);
+        userData.setEmail(email);
+        userData.setPassword(password);
+        userData.setAddress(address);
+        userData.setBirthday(birthday);
+        userData.setPhone_number(phonenumber);
         boolean result = db.addInfoUser(userData);
        if (result == false){
            Toast.makeText(this, "Data is not insert", Toast.LENGTH_SHORT).show();
        }else {
            Toast.makeText(this, "Data is inserted", Toast.LENGTH_SHORT).show();
-           Intent nextPage = new Intent();
+           Intent nextPage = new Intent(Register.this,Profile.class);
+           nextPage.putExtra("email",userData.getEmail());
+           nextPage.putExtra("password",userData.getPassword());
            startActivity(nextPage);
        }
     }
