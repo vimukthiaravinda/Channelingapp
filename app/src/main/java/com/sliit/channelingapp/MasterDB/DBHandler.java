@@ -2,9 +2,11 @@ package com.sliit.channelingapp.MasterDB;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -38,4 +40,23 @@ public class DBHandler extends SQLiteOpenHelper {
             }
             return true;
         }
+    public List<UserData> get_Info(String email){
+        List<UserData> userInputs = new ArrayList<UserData>();
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM user WHERE email = '"+email+"';",null);
+        if (cursor.moveToFirst()){
+            do {
+                UserData usd = new UserData();
+                    usd.setFirst_name(cursor.getString(0));
+                    usd.setSecond_name(cursor.getString(1));
+                    usd.setEmail(cursor.getString(2));
+                    usd.setPhone_number(cursor.getString(3));
+                    usd.setBirthday(cursor.getString(4));
+                    usd.setPassword(cursor.getString(5));
+                    usd.setAddress(cursor.getString(6));
+                userInputs.add(usd);
+            }while (cursor.moveToNext());
+        }
+        return  userInputs;
+    }
     }

@@ -3,12 +3,14 @@ package com.sliit.channelingapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.sliit.channelingapp.MasterDB.DBHandler;
+import com.sliit.channelingapp.MasterDB.UserData;
+
+import java.util.List;
 
 public class Profile extends AppCompatActivity {
     EditText firstName,secondName,emailEdit;
@@ -22,7 +24,7 @@ public class Profile extends AppCompatActivity {
         intent = getIntent();
         email = intent.getStringExtra("email");
         gender = intent.getStringExtra("gender");
-        firstName = findViewById(R.id.firstName);
+        firstName = findViewById(R.id.firstname);
         secondName = findViewById(R.id.secondName);
         db = new DBHandler(this);
         Toast.makeText(this, "email is :"+email, Toast.LENGTH_SHORT).show();
@@ -32,5 +34,9 @@ public class Profile extends AppCompatActivity {
             firstName.setText(stringBuilder.append(cursor.getString(1)));
             secondName.setText(stringBuilder.append(cursor.getString(2)));
         }*/
+        List<UserData> usd = db.get_Info(email);
+       for (UserData uc :usd){
+        firstName.setText(String.valueOf(uc.getFirst_name()));
+       }
     }
 }
