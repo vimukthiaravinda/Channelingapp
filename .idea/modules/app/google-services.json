@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "238647724186",
+    "firebase_url": "https://channeling-app.firebaseio.com",
+    "project_id": "channeling-app",
+    "storage_bucket": "channeling-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:238647724186:android:a6fa4de82e62ca55b07723",
+        "android_client_info": {
+          "package_name": "com.sliit.channelingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "238647724186-41cldn9v2k1ph2q367sflqpt92p2to4l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sliit.channelingapp",
+            "certificate_hash": "ff2c4813cf832a38b5990e007e26a90d9f0c58f2"
+          }
+        },
+        {
+          "client_id": "238647724186-ti43nu2qt6e6f1s1j0o2fnhuhpjk79h9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh6g5NkF9CjAfmib3NTV5nAIABCB4dqg8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "238647724186-ti43nu2qt6e6f1s1j0o2fnhuhpjk79h9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

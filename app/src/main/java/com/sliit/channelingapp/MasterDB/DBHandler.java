@@ -11,6 +11,7 @@ import java.util.List;
 
 
 public class DBHandler extends SQLiteOpenHelper {
+
     public static final String Database_Name = "channeling.db";
     public DBHandler(Context context) {
         super(context, Database_Name, null, 1);
@@ -18,6 +19,8 @@ public class DBHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("Create table user(firstname text,secondname text,email text,phonenumber text,birthday text,password text,address text)");
+        db.execSQL("create table docter(Admin_sepcial INTEGER PRIMARY KEY AUTOINCREMENT,Doctor_id,DoctorName TEXT,Admin_sepcial TEXT,Hospital TEXT,FirstDay TEXT,ThirdDay TEXT,fourthday TEXT)");
+
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -59,4 +62,5 @@ public class DBHandler extends SQLiteOpenHelper {
         }
         return  userInputs;
     }
+    // KV Ariyaratne
     }
