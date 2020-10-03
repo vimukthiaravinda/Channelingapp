@@ -18,6 +18,8 @@ public class DBHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("Create table user(firstname text,secondname text,email text,phonenumber text,birthday text,password text,address text)");
+        //buddhi
+        db.execSQL("Create table doctor(doctor_id text,doctor_name text,spec text,hospital text,first_day text,sec_day text,third_day text,four_day text)");
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -59,4 +61,31 @@ public class DBHandler extends SQLiteOpenHelper {
         }
         return  userInputs;
     }
+
+    //kavi
+
+
+    public boolean addInfodoctor(doctordata doctordata){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("doctor_id",doctordata.getDoctor_id());
+        values.put("doctor_name",doctordata.getDoctor_name());
+        values.put("spec",doctordata.getSpec());
+        values.put("hospital",doctordata.getHospital());
+        values.put("first_day",doctordata.getFirst_day());
+        values.put("sec_day",doctordata.getSec_day());
+        values.put("third_day",doctordata.getThird_day());
+        values.put("four_day",doctordata.getFour_day());
+        long res = db.insert("doctor",null,values);
+        db.close();
+        if (res == -1) {
+            return false;
+        }
+        return true;
+    }
+
+
+
+    //buddhi
+
     }

@@ -25,4 +25,8 @@ public class Login extends AppCompatActivity {
         intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
+    public void onClickAdmin(View view) {
+        intent = new Intent(this, Admin.class);
+        startActivity(intent);
+    }
 }
